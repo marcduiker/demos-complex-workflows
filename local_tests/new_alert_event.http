@@ -1,0 +1,15 @@
+POST http://localhost:7071/api/ReceiveNewAlertEventClient
+Content-Type: application/json
+
+{
+    "id" : "{{$guid}}",
+    "eventType" : 1,
+    "eventVersion" : 1,
+    "companyId" : "{{$guid}}",
+    "eventReceivedDateTime" : "{{$datetime iso8601}}",
+    "alertDetectedDateTime" : "{{$datetime iso8601}}",
+    "attributes" : {
+        "alert_id" : "{{$guid}}",
+        "vessel_id" : "{{$guid}}"
+    }
+}
